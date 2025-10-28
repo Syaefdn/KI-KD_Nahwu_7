@@ -1,0 +1,431 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Presentasi - Kompetensi Inti & Dasar (Kelas VII)</title>
+  <style>
+    :root{
+      --nu-green: #007a3d; /* hijau NU-like */
+      --text: #000000;     /* teks hitam */
+      --accent: rgba(0,0,0,0.08);
+      --slide-w: 1000px;
+      --slide-h: 600px;
+    }
+    html,body{
+      height:100%;
+      margin:0;
+      font-family: "Helvetica Neue", Arial, sans-serif;
+      background: var(--nu-green);
+      color: var(--text);
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      padding:24px;
+      box-sizing:border-box;
+    }
+
+    .stage{
+      width: min(96vw, var(--slide-w));
+      height: min(86vh, var(--slide-h));
+      background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.00));
+      border-radius: 14px;
+      box-shadow: 0 8px 30px rgba(0,0,0,0.25);
+      overflow: hidden;
+      position: relative;
+      display:flex;
+      flex-direction:column;
+    }
+
+    /* Slide area */
+    .slides{
+      flex:1;
+      position:relative;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+    }
+    .slide{
+      width:100%;
+      height:100%;
+      padding:36px 48px;
+      box-sizing:border-box;
+      position:absolute;
+      top:0; left:0;
+      transform: translateX(100%);
+      opacity:0;
+      transition: all 420ms cubic-bezier(.2,.9,.3,1);
+      overflow:auto;
+      -webkit-overflow-scrolling: touch;
+    }
+    .slide.active{
+      transform: translateX(0);
+      opacity:1;
+    }
+    .slide.prev{
+      transform: translateX(-100%);
+      opacity:0;
+    }
+
+    /* Header for each slide */
+    .slide h1{
+      margin:0 0 8px 0;
+      font-size:20px;
+      letter-spacing:0.6px;
+    }
+    .slide h2{
+      margin:0 0 12px 0;
+      font-size:16px;
+      font-weight:700;
+    }
+    .content{
+      font-size:14px;
+      line-height:1.5;
+      white-space:pre-wrap; /* preserve line breaks */
+    }
+
+    /* Controls */
+    .controls{
+      height:72px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      padding:12px 18px;
+      gap:12px;
+      background: linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.00));
+    }
+    .btn{
+      background: #fff;
+      color: var(--text);
+      border-radius:8px;
+      padding:10px 14px;
+      border:none;
+      cursor:pointer;
+      font-weight:700;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+      user-select:none;
+    }
+    .btn:active{ transform: translateY(1px); }
+    .btn.ghost{
+      background: transparent;
+      box-shadow:none;
+      color: rgba(0,0,0,0.85);
+      border: 1px solid rgba(0,0,0,0.06);
+    }
+    .btn.lanjut{
+      background: #e6f7ea;
+      color: var(--text);
+      border: 1px solid rgba(0,0,0,0.06);
+    }
+
+    /* small nav / thumbnails */
+    .thumbs{
+      display:flex;
+      gap:8px;
+      align-items:center;
+      justify-content:center;
+      flex-wrap:wrap;
+    }
+    .thumb{
+      background: rgba(255,255,255,0.04);
+      color:var(--text);
+      padding:6px 10px;
+      border-radius:6px;
+      font-size:12px;
+      cursor:pointer;
+      border: 1px solid rgba(0,0,0,0.04);
+    }
+    .thumb.active{
+      background: rgba(255,255,255,0.12);
+      box-shadow: inset 0 0 0 2px rgba(0,0,0,0.06);
+      font-weight:700;
+    }
+
+    /* make scrollbars thin and subtle */
+    .slide::-webkit-scrollbar{ width:8px; height:8px; }
+    .slide::-webkit-scrollbar-thumb{ background: rgba(0,0,0,0.12); border-radius:6px; }
+    @media (max-width:640px){
+      .stage{ padding:8px; border-radius:10px; }
+      .slide{ padding:18px; }
+      .controls{ padding:8px; height:64px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="stage" role="application" aria-label="Presentasi Kompetensi Inti dan Dasar">
+    <div class="slides">
+      <!-- Slide 1 -->
+      <section class="slide active" id="s1" aria-hidden="false">
+        <h1>KELAS: VII — SEMESTER GANJIL</h1>
+        <h2>KOMPETENSI INTI & KOMPETENSI DASAR</h2>
+        <div class="content">
+KOMPETENSI INTI
+KOMPETENSI DASAR
+1. Menghargai dan
+menghayati ajaran agama
+yang dianutnya
+
+1.1
+Menyadari pentingnya kejujuran dan percaya diri
+sebagai anugerah Allah
+dalam berkomunikasi dengan
+lingkungan sosial sekitar rumah
+dan madrasah
+
+1.2
+Meyakini adanya motivasi internal (intrinsik) sebagai
+anugerah Allah untuk
+pengembangan kemampuan berbahasa Arab
+
+1.3
+Mengamalkan sikap amanah sebagai anugerah Allah
+untuk mempraktikkan bahasa Arab
+sebagai bahasa komunikasi internasional dan pengantar dalam mengkaji hazanah keislaman
+        </div>
+      </section>
+
+      <!-- Slide 2 -->
+      <section class="slide" id="s2" aria-hidden="true">
+        <h1>KELAS: VII — SEMESTER GANJIL (lanj.)</h1>
+        <h2>KOMPETENSI INTI / KOMPETENSI DASAR (2)</h2>
+        <div class="content">
+2. Menghargai dan
+menghayati perilaku jujur,
+disiplin, tanggung jawab, peduli (toleransi, gotong royong), santun, percaya diri dalam
+berinteraksi secara efektif
+
+2.1
+Menunjukkan perilaku jujur dan percaya diri dalam berkomunikasi dengan lingkungan sosial sekitar rumah dan sekolah
+
+2.2
+Menunjukkan perilaku motivasi internal (intrinsik) untuk pengembangan kemampuan berbahasa
+
+KOMPETENSI INTI
+KOMPETENSI DASAR
+dengan lingkungan sosial dan alam dalam jangkauan pergaulan dan keberadaannya
+(intrinsik) untuk pengembangan kemampuan berbahasa
+
+2.3 Menunjukkan sikap bertanggung jawab dalam
+mempraktikkan bahasa Arab sebagai bahasa
+komunikasi internasional dan pengantar dalam mengkaji hazanah keislaman
+        </div>
+      </section>
+
+      <!-- Slide 3 -->
+      <section class="slide" id="s3" aria-hidden="true">
+        <h1>KELAS: VII — SEMESTER GANJIL (lanj. 2)</h1>
+        <h2>KOMPETENSI INTI / KOMPETENSI DASAR (3 & 4)</h2>
+        <div class="content">
+3. Memahami dan menerapkan pengetahuan (faktual, konseptual, dan prosedural) berdasarkan rasa ingin tahunya tentang ilmu tata bahasa
+sebagai kunci utama memahami Alquran /hadits tentang makna dan penjelasan
+para ulama‟yang terkandung didalamnya
+
+3.1
+Memahami bunyi, makna, dan gagasan
+dari kata, frase, kalimat bahasa Arab
+sesuai dengan struktur kalimat yang berkaitan dengan topik
+: ونهخفض حالث ػالياخ tertulis maupun lisan secara baik
+
+3.2
+Memahami bunyi, makna, dan gagasan dari kata, frase,
+kalimat bahasa Arab sesuai dengan struktur
+kalimat yang berkaitan dengan topik
+: ػاليتاٌ ونهجشو baik secara lisan maupun tertulis
+        </div>
+      </section>
+
+      <!-- Slide 4 -->
+      <section class="slide" id="s4" aria-hidden="true">
+        <h1>KELAS: VII — SEMESTER GANJIL (lanj. akhir)</h1>
+        <h2>KOMPETENSI INTI / KOMPETENSI DASAR (4 lanj.)</h2>
+        <div class="content">
+4. Mengolah, menyaji dan menalar dalam ranah konkret
+(menggunakan, mengurai, merangkai, memodifikasi dan membuat) dan ranah
+abstrak (menulis, membaca, menghitung, menggambar, dan
+mengarang) sesuai dengan yang dipelajari di sekolah dan sumber
+lain yang semua dalam sudut pandang/teori.
+
+4.1
+Mendemonstrasikan ungkapan informasi lisan dan tulisan sederhana tentang topik
+ػالياخ حالث ونهخفض
+dengan memperhatikan struktur teks dan unsur
+kebahasaan yang benar dan sesuai konteks
+
+4.2
+Mendemonstrasikan ungkapan informasi lisan dan tulisan sederhana tentang topik
+ػاليتاٌ ونهجشو
+dengan memperhatikan struktur teks dan unsur
+kebahasaan yang benar dan sesuai konteks
+        </div>
+      </section>
+
+      <!-- Slide 5 -->
+      <section class="slide" id="s5" aria-hidden="true">
+        <h1>KELAS: VII — SEMESTER GENAP</h1>
+        <h2>KOMPETENSI INTI & KOMPETENSI DASAR (Genap)</h2>
+        <div class="content">
+KELAS: VII SEMESTER GENAP
+
+KOMPETENSI INTI
+KOMPETENSI DASAR
+1. Menghargai dan
+menghayati ajaran agama
+yang dianutnya
+
+1.4
+Menyadari pentingnya kejujuran dan percaya diri
+sebagai anugerah Allah
+dalam berkomunikasi dengan
+lingkungan sosial sekitar rumah
+dan madrasah
+
+1.5
+Meyakini adanya motivasi internal (intrinsik) sebagai
+anugerah Allah untuk
+pengembangan kemampuan berbahasa Arab
+
+1.6
+Mengamalkan sikap amanah sebagai anugerah Allah
+untuk mempraktikkan bahasa Arab sebagai bahasa komunikasi internasional dan pengantar dalam mengkaji hazanah keislaman
+        </div>
+      </section>
+
+      <!-- Slide 6 -->
+      <section class="slide" id="s6" aria-hidden="true">
+        <h1>KELAS: VII — SEMESTER GENAP (lanj.)</h1>
+        <h2>KOMPETENSI INTI / KOMPETENSI DASAR (Genap 2)</h2>
+        <div class="content">
+2. Menghargai dan menghayati perilaku jujur, disiplin, tanggung jawab, peduli (toleransi, gotong royong), santun, percaya diri dalam berinteraksi secara efektif dengan lingkungan sosial dan alam
+dalam jangkauan pergaulan dan keberadaannya
+
+2.4
+Menunjukkan perilaku jujur dan percaya diri dalam berkomunikasi dengan lingkungan sosial sekitar rumah dan sekolah
+
+2.5
+Menunjukkan perilaku motivasi internal (intrinsik) untuk pengembangan kemampuan berbahasa
+
+2.6
+Menunjukkan sikap bertanggung jawab dalam
+mempraktikkan bahasa Arab sebagai bahasa
+komunikasi internasional dan pengantar dalam mengkaji hazanah keislaman
+        </div>
+      </section>
+
+      <!-- Slide 7 -->
+      <section class="slide" id="s7" aria-hidden="true">
+        <h1>KELAS: VII — SEMESTER GENAP (lanj. 3)</h1>
+        <h2>KOMPETENSI INTI / KOMPETENSI DASAR (Genap 3 & 4)</h2>
+        <div class="content">
+3. Memahami dan menerapkan pengetahuan (faktual, konseptual, dan prosedural) berdasarkan rasa ingin tahunya tentang ilmu tata bahasa
+sebagai kunci utama memahami Alquran /hadits tentang makna dan penjelasan para ulama‟yang terkandung didalamnya
+
+3.3
+Memahami jenis jenis I”rob dan semua isim
+dan fiil yang berubah secara mu‟rob dari kata,
+frase, kalimat bahasa Arab sesuai dengan struktur kalimat yang berkaitan dengan
+topik :
+قظًاٌ انًؼزتاخ baik secara lisan maupun tertulis
+
+3.4
+Memahami jenis jenis fiil yang terkait bunyi, makna,
+dan gagasan dari kata, frase, kalimat bahasa Arab sesuai
+dengan struktur kalimat yang berkaitan dengan topik :
+االفؼال حالحح baik secara lisan maupun tertulis
+dan memahami cirri cirri dari jenis jenis fiil
+        </div>
+      </section>
+
+      <!-- Slide 8 -->
+      <section class="slide" id="s8" aria-hidden="true">
+        <h1>KELAS: VII — SEMESTER GENAP (penutup)</h1>
+        <h2>KOMPETENSI INTI / KOMPETENSI DASAR (Genap akhir)</h2>
+        <div class="content">
+4. Mengolah, menyaji dan menalar dalam ranah konkret
+(menggunakan, mengurai, merangkai, memodifikasi dan membuat) dan ranah
+abstrak (menulis, membaca, menghitung, dan mengarang) sesuai dengan yang
+dipelajari di sekolah dan sumber lain yang semua dalam sudut pandang/teori.
+
+4.3
+Mendemonstrasikan ungkapan informasi lisan dan tulisan sederhana tentang topik
+قظًاٌ انًؼزتاخ dengan memperhatikan struktur teks dan unsur kebahasaan yang benar dan sesuai konteks
+
+4.4
+Mendemonstrasikan ungkapan informasi lisan dan tulisan sederhana tentang topik
+االفؼال حالحح
+dengan memperhatikan struktur teks dan unsur kebahasaan yang benar dan sesuai konteks
+        </div>
+      </section>
+
+    </div>
+
+    <div class="controls" role="toolbar" aria-label="Kontrol presentasi">
+      <div style="display:flex; gap:8px; align-items:center;">
+        <button class="btn ghost" id="prevBtn" aria-label="Sebelumnya">⟨ SEBELUMNYA</button>
+        <button class="btn lanjut" id="nextBtn" aria-label="Lanjut (LANJUT)">LANJUT ⟩</button>
+      </div>
+
+      <div class="thumbs" id="thumbs" aria-hidden="false">
+        <!-- thumbnails will be injected -->
+      </div>
+    </div>
+  </div>
+
+  <script>
+    (function(){
+      const slides = Array.from(document.querySelectorAll('.slide'));
+      const thumbsWrap = document.getElementById('thumbs');
+      let idx = 0;
+      const total = slides.length;
+
+      function renderThumbs(){
+        slides.forEach((s,i)=>{
+          const t = document.createElement('div');
+          t.className = 'thumb' + (i===idx? ' active':'');
+          t.textContent = (i+1);
+          t.title = 'Slide ' + (i+1);
+          t.addEventListener('click', ()=> goTo(i));
+          thumbsWrap.appendChild(t);
+        });
+      }
+
+      function update(){
+        slides.forEach((s,i)=>{
+          s.classList.remove('active','prev');
+          if(i === idx) s.classList.add('active');
+          else if(i === idx-1) s.classList.add('prev');
+        });
+        // update thumbs
+        Array.from(thumbsWrap.children).forEach((t,i)=>{
+          t.classList.toggle('active', i===idx);
+        });
+      }
+
+      function goTo(i){
+        if(i<0) i = 0;
+        if(i>total-1) i = total-1;
+        idx = i;
+        update();
+      }
+
+      // controls
+      document.getElementById('nextBtn').addEventListener('click', ()=>{
+        goTo(idx+1);
+      });
+      document.getElementById('prevBtn').addEventListener('click', ()=>{
+        goTo(idx-1);
+      });
+
+      // keyboard navigation
+      window.addEventListener('keydown', (e)=>{
+        if(e.key === 'ArrowRight' || e.key === 'PageDown') goTo(idx+1);
+        if(e.key === 'ArrowLeft' || e.key === 'PageUp') goTo(idx-1);
+      });
+
+      renderThumbs();
+      update();
+    })();
+  </script>
+</body>
+</html>
